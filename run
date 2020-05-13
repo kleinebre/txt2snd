@@ -1,0 +1,5 @@
+cat input.txt|printerbanner -w 40 |./txt2snd.pl >result.raw
+# sox -r 44100 -b 16 -s result.raw result.wav
+sox -r 44100 -b 16 -e signed-integer result.raw result.wav
+rm result.raw
+
